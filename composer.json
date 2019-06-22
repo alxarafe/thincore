@@ -1,0 +1,27 @@
+{
+    "name": "alxarafe/thincore",
+    "description": "Lightweight core with modular application support",
+    "homepage": "https://www.alxarafe.com/thincore",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alxarafe team",
+            "email": "info@alxarafe.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "symfony/yaml": "^4.2",
+        "monolog/monolog": "^1.24",
+        "components/jquery": "^3.3",
+        "twbs/bootstrap": "^3.4",
+        "maximebf/debugbar": "^1.0",
+        "twig/twig": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ThinCore\\": "",
+            "Alxarafe\\": "alxarafe/src/Core/"
+        }
+    }
+}
