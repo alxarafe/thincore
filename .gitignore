@@ -1,0 +1,14 @@
+/.idea/
+/doc/
+/nbproject/
+/plugins/
+/tmp/
+/vendor/
+/old/
+.DS_Store
+.htaccess
+.vscode
+config.php
+*.lock
+composer-update.sh
+composer.phar
