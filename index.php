@@ -15,5 +15,3 @@ if (!file_exists($autoloadFile)) {
 require_once $autoloadFile;
 
 (new \Alxarafe\Helpers\Dispatcher())->run();
-
-die(DEBUG ? 'End of execution!' : '');

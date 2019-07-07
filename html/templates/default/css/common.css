@@ -1,0 +1,399 @@
+body {
+    padding-top: 60px;
+    /* padding: 0px; */
+    margin: 0px;
+    color: #000015;
+    font-family: 'Roboto';
+}
+
+textarea {
+    resize: none;
+}
+
+#top-bar {
+    background: /* #EEE8AA */ #EEEEEE;
+    opacity: 0.95;
+}
+
+li.active {
+    background: white;
+}
+
+.web-container {
+    /*margin: 5px 5px 10px;
+    padding: 5px 10px 10px;*/
+
+    margin: 0px 0px 0px;
+    padding: 6px 6px 6px;
+}
+
+.web-item {
+    background-color: #EEE;
+    border-radius: 4px;
+    /*margin: 5px 5px 10px;
+    padding: 5px 10px 10px;*/
+    margin: 0px 0px 0px;
+    padding: 0px 0px 0px;
+    box-shadow: 2px 6px 6px;
+    height: 270px;
+}
+
+.sitepanel {
+    background-color: #EEE;
+    border-radius: 8px;
+    margin: 5px 5px 10px;
+    padding: 5px 10px 10px;
+    box-shadow: 2px 6px 6px;
+}
+
+.cortar {
+    /*
+  width:200px;
+  height:20px;
+  padding:20px;
+  border:1px solid blue;
+  */
+    padding: 6px 1px 3px 1px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.cortar:hover {
+    width: auto;
+    white-space: initial;
+    overflow: visible;
+    cursor: pointer;
+}
+
+.moreinfo a,
+.moreinfo {
+    text-align: center;
+    padding: 5px;
+    background: blue;
+    color: white;
+    border-radius: 5px;
+    width: 100px;
+    margin: auto;
+    text-decoration: none;
+}
+
+
+.moreinfo:hover,
+.moreinfo:link {
+    background: darkblue;
+    text-decoration: none;
+}
+
+.shortinfo {
+    margin: auto;
+    background: /* #EEE8AA */ #EEEEEE;
+    padding: 5px;
+    margin: 15px 10% 10px 10%;
+    box-shadow: 1px 3px 3px;
+    text-align: center;
+}
+
+.longinfo {
+    margin: auto;
+    background: #ffffee;
+    padding: 5px;
+    margin: 15px 10% 10px 10%;
+    box-shadow: 1px 3px 3px;
+}
+
+.textdomains {
+    margin: auto;
+    background: /* #EEE8AA */ #EEEEEE;
+    padding: 5px;
+    margin: 15px 10% 10px 10%;
+    box-shadow: 1px 3px 3px;
+    text-align: center;
+}
+
+.textdomain {
+    margin: auto;
+    background: #ffffee;
+    padding: 5px;
+    box-shadow: 1px 3px 3px;
+    border-radius: 5px;
+    margin: 5%;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 5%;
+    right: 5%;
+    /*
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        bottom: -12px;
+    */
+}
+
+/*
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+*/
+
+.top-bar-fixed {
+    background-color: #FFFF15;
+    width: 100%;
+    /* min-height: 0px; */
+    height: 30px;
+}
+
+#top-bar2 {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    /*min-height: 0px;*/
+    height: 30px;
+}
+
+.form-group {
+    clear: left;
+}
+
+.navbar-item > a {
+    background: white;
+}
+
+.navbar-item {
+    background: pink;
+    height: 20px;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.navbar-toggle {
+    background-color: #FFA500;
+}
+
+.icon-bar {
+    background: #000015;
+}
+
+#logo {
+    height: 40px;
+    margin: 5px;
+}
+
+.mini-touch-button,
+.big-text-touch-button,
+.touch-button {
+    text-align: center;
+    text-overflow: ellipsis;
+    margin: 1%;
+    width: 150px;
+    height: 100px;
+    display: inline-flex;
+    align-items: center; /* cross axis */
+    justify-content: center; /* main axis */
+
+    line-height: 1; /* reset */
+}
+
+.big-text-touch-button {
+    font-size: 2vw;
+}
+
+.mini-touch-button {
+    width: 120px;
+    height: 90px;
+}
+
+/* Paginación */
+
+.pages {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    background-color: LightGray;
+    height: 31px;
+    /*
+    background-color: GoldenRod;
+    border-radius: 20px;
+    height: 40px;
+    */
+}
+
+ul.pagination {
+    margin: 2px;
+    color: Blue;
+}
+
+ul.pagination li a {
+    margin: 0px 1px;
+    padding: 2px 8px;
+}
+
+ul.pagination a.disabled {
+    color: LightGray;
+}
+
+ul.pagination a.active {
+    background-color: LightBlue;
+    color: DarkBlue;
+}
+
+
+/*
+%test {
+  position: absolute;
+    content: '';
+    transition: all .5s;
+}
+
+.touch-button { 
+    display: inline-block; 
+    padding: 20px 40px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    vertical-align: middle;
+    font-family: 'Rubik One', sans-serif;
+    text-decoration: none;
+    font-size: 4vw;
+    transition: all .5s;
+    background-color: #3498db;
+
+    &::before {
+    @extend %test;
+        bottom: -15px;
+        height: 15px;
+        width: 100%;
+        left: 8px;
+        transform: skewX(45deg);
+        background-color: darken(#3498db, 20%);
+    }
+
+    &::after {
+        @extend %test;
+        right: -15px;
+        height: 100%;
+        width: 15px;
+        bottom: -8px;
+        transform: skewY(45deg);
+        background-color: darken(#3498db, 30%);
+    }
+
+    &:active {
+        margin-left: 10px;
+        margin-top: 10px;
+        &::before {
+            bottom: -5px;
+            height: 5px;
+            left: 3px;
+        }
+        
+    &::after {
+            right: -5px;
+            width: 5px;
+            bottom: -3px;
+        }   
+    }
+}
+*/
+
+.copyright {
+    background: /* #EEE8AA */ #EEEEEE;
+    opacity: 0.95;
+    padding-left: -150px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: -12px;
+}
+
+/*
+
+section {
+	padding: 90px;
+}
+
+.panel {
+	padding: 30px;
+}
+
+.panel-warning {
+	background: rgba(46, 51, 56, 0.1)!important;
+	margin: 5% 10% 5% 10%;
+}
+
+.panel-sales {
+	background: rgba(0, 40, 40, 0.6)!important;
+	margin: 5% 2% 5% 2%;
+}
+
+body { 
+	font-size: 30px; 
+}
+
+h1 {
+	font-size: 50px;
+}
+
+h2 {
+	font-size: 40px;
+}
+
+.copyright {
+	font-size: 16px;
+}
+
+@media screen and (max-width: 800px) {
+	section	{ padding: 50px; }
+	body	{ font-size: 20px; }
+	h1		{ font-size: 30px; }
+	h2		{ font-size: 25px; }
+	.copyright { font-size: 10px; }
+}
+
+.panel-default {
+	color: darkgray;
+}
+
+section { 
+	display: block; 
+	text-align: center; 
+	margin: 0 auto; 
+}
+
+a { 
+	color: lightblue; 
+	text-decoration: none; 
+}
+
+a:hover { 
+	color: darkblue; text-decoration: none; 
+}
+
+.copyright {
+	background: rgba(40, 0, 0, 0.6)!important;
+	padding-left: -150px;
+	text-align: center; 
+	position: fixed;
+	width: 100%;
+	bottom: -12px;
+}
+
+td, th {
+	padding: 0px 5% 0px 5%;
+}
+
+.center-table {
+	background: rgba(40, 0, 0, 0.6)!important;
+	text-align: left;
+    border-radius: 5px;
+    width: 60%;
+    margin: 0px auto;
+    float: none;
+}
+
+*/

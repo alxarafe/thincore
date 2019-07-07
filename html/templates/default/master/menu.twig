@@ -1,7 +1,14 @@
-<div>
-    {% if user=="" %}
-        No user connected!
-    {% else %}
-        {{ user }} <a href="?call=Login&run=off">Logout</a>
-    {% endif %}
-</div>
+<nav id="top-bar" class="navbar navbar-fixed-top">
+        <div class="container">
+                <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                        </button>
+                </div>
+                {{ view.showMenus() }}
+        </div>
+</nav>

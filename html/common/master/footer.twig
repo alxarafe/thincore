@@ -1,7 +1,17 @@
-{#
- ~ Alxarafe. Development of PHP applications in a flash!
- ~ Copyright (C) 2018 Alxarafe <info@alxarafe.com>
-#}
+<!-- Including jsCode -->
+{% block javascriptsFooter %}
+    {# Including jsCode #}
+    <script src="vendor/components/jquery/jquery.min.js"></script>
+    <script src="vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
+    {% for js in jsCode %}
+        <script type="text/javascript" src="{{ js }}"></script>
+    {% endfor %}
+    <!-- start of getFooter -->
+    {{ view.getFooter() | raw }}
+    <!-- end of getFooter -->
+{% endblock %}
+<!-- End of jsCode inclusion -->
+</html>
 
 <footer class="footer" id="footercontent" name="footercontent">
     <div class="container">
@@ -11,16 +21,3 @@
         </p>
     </div>
 </footer>
-
-{# Including jsCode #}
-<script src="vendor/components/jquery/jquery.min.js"></script>
-<script src="vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
-{% block javascriptsFooter %}
-    {% for js in jsCode %}
-        <script type="text/javascript" src="{{ js }}"></script>
-    {% endfor %}
-    {# Start of getFooter #}
-    {{ view.getFooter() | raw }}
-    {# End of getFooter #}
-{% endblock %}
-{# End of jsCode inclusion #}
