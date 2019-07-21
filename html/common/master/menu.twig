@@ -22,6 +22,12 @@
                 </li>
             </ul>
             {% endif %}
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="{{ constant('BASE_URI') }}/index.php?{{ constant('CALL_CONTROLLER') }}=ChangeSkin">Cambiar
+                        Skin</a>
+                </li>
+            </ul>
             <ul class="nav navbar-nav navbar-right">
                 {% if user %}
                     <li class="dropdown">
