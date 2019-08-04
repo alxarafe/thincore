@@ -45,6 +45,7 @@ class ChangeSkin extends Controller
 
         if (isset($_POST['submit'])) {
             $this->save();
+            header('Location: ' . constant('BASE_URI') . '/index.php?' . constant('CALL_CONTROLLER') . '=ChangeSkin');
         }
     }
 
