@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% block header %}{% include 'master/header.twig' %}{% endblock %}
+</head>
+<body id="page-top"{% if view.protectClose %} onBeforeUnload='return iCanClose()'{% endif %}>
+
+{% block menu %}{% include 'master/menu.twig' %}{% endblock %}
+<div id="content-wrapper">
+
+    {% block errors %}{% include 'master/errors.twig' %}{% endblock %}
+    <div class="container-fluid">
+
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="#">Dashboard</a>
+            </li>
+            <li class="breadcrumb-item active">Overview</li>
+        </ol>
+
+        <!-- Begin Body -->
+        {% block body %}{% endblock %}
+        <!-- End Body -->
+
+    </div>
+    <hr>
+</div>
+{% block footer %}{% include 'master/footer.twig' %}{% endblock %}
+</body>

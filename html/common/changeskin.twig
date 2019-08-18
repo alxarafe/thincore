@@ -1,10 +1,10 @@
-{% extends "index.twig" %}
+{% extends "master/index.twig" %}
 
 {% block title %}Cambie el skin y pruebe el resultado{% endblock %}
 
 {% block body %}
     {{ view.newRow(view.blockContainer(view.title('Cambie el skin y pruebe el resultado')))|raw }}
-    <div class="container">
+    <!-- <div class="container"> -->
         <form action='?call=ChangeSkin' method='post' accept-charset="utf-8">
             <div class="col-xm-4">&nbsp;</div>
             <div class="col-xm-4">
@@ -28,6 +28,6 @@
             </div>
             <div class="col-x-4">&nbsp;</div>
         </form>
-    </div>
+    <!-- </div> -->
     <!-- /#page-wrapper -->
 {% endblock %}
