@@ -32,32 +32,18 @@ class ChangeSkin extends Controller
     }
 
     /**
-     * Main is invoked if method is not specified.
-     * Check if you have to save changes or just exit
-     *
-     * @return void
-     */
-    public function main()
-    {
-        if (isset($_POST['cancel'])) {
-            header('Location: ' . BASE_URI);
-        }
-
-        if (isset($_POST['submit'])) {
-            $this->save();
-            header('Location: ' . constant('BASE_URI') . '/index.php?' . constant('CALL_CONTROLLER') . '=ChangeSkin');
-        }
-    }
-
-    /**
      * Save the form changes in the configuration file
      *
      * @return void
      */
-    private function save()
+    public function do_save()
     {
+        parent::do_save();
+
         Config::setVar('templaterender', 'main', 'skin', $_POST['skin'] ?? '');
-        Config::saveConfigFile();
+        if (Config::saveConfigFile()) {
+            header('Location: ' . constant('BASE_URI') . '/index.php?' . constant('CALL_CONTROLLER') . '=ChangeSkin');
+        }
     }
 
 }
