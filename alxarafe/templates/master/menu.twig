@@ -1,0 +1,7 @@
+<div>
+    {% if user=="" %}
+        No user connected!
+    {% else %}
+        {{ user }} <a href="?call=Login&run=logout">Logout</a>
+    {% endif %}
+</div>
