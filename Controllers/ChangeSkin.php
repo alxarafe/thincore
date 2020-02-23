@@ -36,9 +36,9 @@ class ChangeSkin extends Controller
      *
      * @return void
      */
-    public function do_save()
+    public function doSave()
     {
-        parent::do_save();
+        parent::doSave();
 
         Config::setVar('templaterender', 'main', 'skin', $_POST['skin'] ?? '');
         if (Config::saveConfigFile()) {

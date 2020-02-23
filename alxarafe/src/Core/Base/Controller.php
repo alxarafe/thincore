@@ -16,14 +16,32 @@ use Alxarafe\Helpers\Skin;
 abstract class Controller
 {
     /**
+     * True to confirm exit before losing changes
+     *
      * @var bool
      */
     public $protectedClose;
 
     /**
-     * @var mixed
+     * Contains the action to execute
+     *
+     * @var string|null
      */
     public $action;
+
+    /**
+     * Controller constructor.
+     */
+    public function __construct()
+    {
+        $this->protectedClose = false;
+        $this->action = null;
+    }
+
+    public function getResource($string)
+    {
+        return Skin::getResource($string);
+    }
 
     /**
      * Main is invoked if method is not specified.
@@ -31,56 +49,48 @@ abstract class Controller
      *
      * @return void
      */
-    // abstract public function main();
-
-    /**
-     * Controller constructor.
-     */
-    public function __construct()
-    {
-    }
-
     public function main()
     {
-        $this->pre_load();
-        $this->do_action();
+        $this->preAction();
+        $this->doAction();
+        $this->postAction();
     }
 
-    public function pre_load()
+    public function preAction()
     {
-        $this->protectedClose = false;
         $this->action = filter_input(INPUT_POST, 'action', FILTER_DEFAULT);
     }
 
-    public function do_action()
+    public function doAction()
     {
         if (!isset($this->action)) {
             return;
         }
 
         switch ($this->action) {
+            case 'submit':
             case 'save':
-                $this->do_save();
+                $this->doSave();
                 break;
             case 'exit':
-                $this->do_exit();
+                $this->doExit();
             default:
                 trigger_error("The '{$this->action}' action has not been defined!");
         }
     }
 
-    public function do_save()
+    public function postAction()
+    {
+
+    }
+
+    public function doSave()
     {
     }
 
-    public function do_exit()
+    public function doExit()
     {
         header('Location: ' . BASE_URI);
-    }
-
-    public function getResource($string)
-    {
-        return Skin::getResource($string);
     }
 
 }

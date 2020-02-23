@@ -57,7 +57,7 @@ class Dispatcher
     }
 
     /**
-     * Define the constants of the application
+     * Define application constants
      */
     public function defineConstants()
     {

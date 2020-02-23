@@ -33,32 +33,12 @@ class EditConfig extends Controller
     }
 
     /**
-     * Main is invoked if method is not specified.
-     * Check if you have to save changes or just exit
-     *
-     * @return void
-     */
-    public function main()
-    {
-        if (isset($_POST['cancel'])) {
-            header('Location: ' . BASE_URI);
-        }
-
-        if (isset($_POST['submit'])) {
-            $this->save();
-            header('Location: ' . BASE_URI);
-        }
-    }
-
-    /**
      * Save the form changes in the configuration file
      *
      * @return void
      */
-    private function save()
+    public function doSave()
     {
-        var_dump($_POST);
-
         Config::setVar('templaterender', 'main', 'skin', $_POST['skin'] ?? '');
         Config::setVar('database', 'main', 'dbEngineName', $_POST['dbEngineName'] ?? '');
         Config::setVar('database', 'main', 'dbUser', $_POST['dbUser'] ?? '');
@@ -69,23 +49,6 @@ class EditConfig extends Controller
 
         Config::saveConfigFile();
 
-        /*
-        $vars = [];
-        $vars['dbEngineName'] = $_POST['dbEngineName'] ?? '';
-        $vars['skin'] = $_POST['skin'] ?? '';
-        $vars['dbUser'] = $_POST['dbUser'] ?? '';
-        $vars['dbPass'] = $_POST['dbPass'] ?? '';
-        $vars['dbName'] = $_POST['dbName'] ?? '';
-        $vars['dbHost'] = $_POST['dbHost'] ?? '';
-        $vars['dbPort'] = $_POST['dbPort'] ?? '';
-
-        $yamlFile = Config::getConfigFileName();
-        $yamlData = YAML::dump($vars);
-
-        var_dump($yamlData);
-        die("Aquí se guardaría $yamlFile en EditConfig");
-
-        file_put_contents($yamlFile, $yamlData);
-        */
+        $this->doExit();
     }
 }
